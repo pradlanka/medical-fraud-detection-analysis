@@ -1,9 +1,11 @@
 
 
 ## 1. Buisiness problem
-Health care fraud  is a huge problem in the United States. As the FBI website notes, health care fraud is not a victimless crime and it causes tens of billions of dollars in losses each year. It can raise health insurance premiums, expose you to unnecessary medical procedures, and increased taxes. In this project, I will predict the potentially fraudulent providers based on providers claims. The dataset for this analysis is from Kaggle <https://www.kaggle.com/datasets/rohitrox/healthcare-provider-fraud-detection-analysis/data> It contians infromation about claims and beneficiary information for several patients and providers.
-
-## 2. Exploratory data analysis (EDA) 
+Health care fraud  is a huge problem in the United States. As the FBI website notes, health care fraud is not a victimless crime and it causes tens of billions of dollars in losses each year. It can raise health insurance premiums, expose you to unnecessary medical procedures, and increased taxes. In this project, I will predict the potentially fraudulent providers based on providers claims.
+## 2. Dataset used
+ The dataset for this analysis is from Kaggle <https://www.kaggle.com/datasets/rohitrox/healthcare-provider-fraud-detection-analysis/data> It contians infromation about claims and beneficiary information for several patients and providers.
+ 
+## 3. Exploratory data analysis (EDA) 
 As expected the data is heavily unabalanced with a lot more providers who have not commited fraud than those who did commit fraud by a factor of 9 with 506 out of 5410 providers potentially commiting fraud. From the beneficiaries datase, it is clear and that the most of the beneficiaries were covered for the entire 12 months in an year and a large percentage of them have chronic conditions as shown in the figure below. 
 <img title="Chronic condition prevalance in the our sample" alt="Alt text" src="/images/ChronicCond.png">
 
