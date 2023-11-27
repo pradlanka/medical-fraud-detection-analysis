@@ -22,4 +22,7 @@ with col2:
 st.text('')
 if st.button("Predict whether provider is fradulent"):
     result = predict(np.array([OP_TotalClaims, IP_days_in_hospital, OP_RenalDiseaseIndicator, IP_TotalClaims, OP_NoClmDiagnosisCodes]).reshape(1, -1))
-    st.text(result[0])
+    if result[0] == 0:
+        st.text("Provider is not fradulent")
+    else:
+        st.text("Provider is fradulent")
