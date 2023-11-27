@@ -19,8 +19,6 @@ with col2:
     OP_RenalDiseaseIndicator =st.number_input('OP_RenalDiseaseIndicator', min_value=0, max_value=1)
     OP_NoClmDiagnosisCodes  = st.number_input('OP_NoClmDiagnosisCodes', min_value=0, max_value=20)
 
-
-st.button("Predict whether provider is fradulent")
 if st.button("Predict whether provider is fradulent"):
     result = predict(np.array([OP_TotalClaims, IP_days_in_hospital, OP_RenalDiseaseIndicator, IP_TotalClaims, OP_NoClmDiagnosisCodes]).reshape(1, -1))
     st.text(result[0])
