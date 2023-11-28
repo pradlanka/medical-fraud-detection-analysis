@@ -38,10 +38,13 @@ We evaluated the best models with optimal set of hyperparameters  for each class
 From the above performance metrics, it appears that CatBoost provides a good balance between precision and recall. Hence this is the model we would deploy.
 
 ## 6. Deployment
-Since, the trained CatBoost model has several hundreds of features, we would want to deploy a model with fewer features. Hence we select the 5 most informative features from CatBoost based on the feature importance and train a new model on those 5 features which we will deploy on StreamLit. 
+Since, the trained CatBoost model has several hundreds of features, we would want to deploy a model with fewer features. The plot below shows the feature importance for the top features. 
+<img title="Top important features scores" alt="Alt text" src="/images/FeatureImportance.png">
+From the plot, it is clear that top 5 features have very high scores. Hence we select the 5 most informative features from CatBoost based on the feature importance and train a new model on those 5 features which we will deploy on StreamLit. 
 The distribution of values for the top 5 features is shown below
 <img title="Top 5 most important features" alt="Alt text" src="/images/Top5Features.png">
 THe ROC Curve and the precision-recall curve for the CatBoost classifier with just the top 5 features is shown below. 
 <img title="PR and ROC curves" alt="Alt text" src="/images/CatBoost5.png">
 
-The deployed model is hosted on Streamlit at [Provider-fraud-detection](https://medical-fraud-detection-analysis-pradlanka.streamlit.app) where the user can enter the provider's features  and get a prediction on the whether a provider is potentially fraudulent or not.
+The deployed model is hosted on Streamlit at [Provider-fraud-detection](https://medical-fraud-detection-analysis-pradlanka.streamlit.app) where the user can enter the provider's features  and get a prediction on the whether a provider is potentially fraudulent or not. A screenshot of the App is displayed below 
+<img title="App GUI" alt="Alt text" src="/images/AppGUI.png">
