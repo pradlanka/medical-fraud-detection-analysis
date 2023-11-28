@@ -23,6 +23,6 @@ st.text('')
 if st.button("Predict whether provider is fradulent"):
     result = predict(np.array([OP_TotalClaims, IP_days_in_hospital, OP_RenalDiseaseIndicator, IP_TotalClaims, OP_NoClmDiagnosisCodes]).reshape(1, -1))
     if result <= 0.5:
-        st.text("Provider is not fradulent with probability " + str(round(1.0-result)))
+        st.text("Provider is not fradulent with probability " + str(round(1.0-result)), color='green')
     else:
-        st.text("Provider is fradulent with probability " + str(round(result,2)))
+        st.text("Provider is fradulent with probability " + str(round(result,2)), color = 'red')
