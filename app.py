@@ -11,18 +11,18 @@ st.header("Provider features")
 col1, col2 = st.columns(2)
 with col1:
     st.text("IP characterisitcs")
-    IP_days_in_hospital = st.number_input('IP_days_in_hospital', min_value=0, max_value=40)
-    IP_TotalClaims = st.number_input('Total Claims', min_value=0, max_value=500)
+    IP_days_in_hospital = st.number_input('Average stay of in-patient claims', min_value=0, max_value=40)
+    IP_TotalClaims = st.number_input('Total no of in-patient claims filed by the provider', min_value=0, max_value=500)
 with col2:
     st.text("OP characteristics")
-    OP_TotalClaims = st.number_input('OP_TotalClaims', min_value=0, max_value=40)
-    OP_RenalDiseaseIndicator =st.number_input('OP_RenalDiseaseIndicator', min_value=0.00, max_value=1.00, format="%.2f", step=0.01)
-    OP_NoClmDiagnosisCodes  = st.number_input('OP_NoClmDiagnosisCodes', min_value=0, max_value=20)
+    OP_TotalClaims = st.number_input('Total no of out-patient claims filed by the provider', min_value=0, max_value=40)
+    OP_RenalDiseaseIndicator =st.number_input('Fraction of patients with renal disease in Outpatient claims', min_value=0.00, max_value=1.00, format="%.2f", step=0.01)
+    OP_NoClmDiagnosisCodes  = st.number_input('Total no of outpatient diganosis codes in claims filed by the provider', min_value=0, max_value=20)
 
 st.text('')
 if st.button("Predict whether provider is fradulent"):
     result = predict(np.array([OP_TotalClaims, IP_days_in_hospital, OP_RenalDiseaseIndicator, IP_TotalClaims, OP_NoClmDiagnosisCodes]).reshape(1, -1))
-    if result[0] == 0:
-        st.text("Provider is not fradulent")
+    if result[0] <= 0.5:
+        st.text("Provider is not fradulent with probability " + str(round(1.0-result[0])))
     else:
-        st.text("Provider is fradulent")
+        st.text("Provider is fradulent with probability " + str(round(result[0],2)))
