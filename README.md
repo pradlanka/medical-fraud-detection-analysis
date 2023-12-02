@@ -4,7 +4,9 @@ Health care fraud  is a huge problem in the United States. As the FBI website no
 
 ## 2. Exploratory data analysis (EDA) 
 As expected the data is heavily unabalanced with a lot more providers who have not commited fraud than those who did commit fraud by a factor of 9 with 506 out of 5410 providers potentially commiting fraud. From the beneficiaries datase, it is clear and that the most of the beneficiaries were covered for the entire 12 months in an year and a large percentage of them have chronic conditions.Furthermore we can can look at procedure codes and diagnostic codes for the inpatient and outpatient claims and extract the top100 most common codes as features to improve our prediction of fraudulent providers. A word cloud of the procedure codes for in patient claims is shown below.
-<img title="Out patient Claim diagnostic codes" alt="Alt text" src="/images/ClaimsDiagnosisOutpatient.png">
+
+<img title="Out patient Claim diagnostic codes" alt="Alt text" src="/images/ClaimsDiagnosisOutpatient.png" width="100%">
+
 An important feature in prediction of fraduent providers could be the days of stay at the hospital for in_patient claims which is shown in the figure below.
 <img title="Days spent in Hosptial for in patients" alt="Alt text" src="/images/DaysInHospital.png">
 
