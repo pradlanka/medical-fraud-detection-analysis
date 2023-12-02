@@ -34,7 +34,7 @@ We evaluated the best models with optimal set of hyperparameters  for each class
 |  Logistic Regression | 0.438889 | 0.290441 | 0.897727 | 0.798604 | 0.913736 |
 |        Random Forest | 0.577778 | 0.829787 | 0.443182 | 0.943170 | 0.960463 |
 |              XGBoost | 0.597403 | 0.696970 | 0.522727 | 0.938185 | 0.952931 |
-|             CatBoost | 0.697368 | 0.828125 | 0.602273 | 0.954138 | 0.958594 |
+|             **CatBoost** | **0.697368** | **0.828125** | **0.602273** | **0.954138** | **0.958594** |
 |                  KNN | 0.560000 | 0.945946 | 0.397727 | 0.945165 | 0.951465 |
 
 From the above performance metrics, it appears that CatBoost provides a good balance between precision and recall. Hence this is the model we would deploy.
