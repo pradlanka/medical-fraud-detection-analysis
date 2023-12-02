@@ -47,4 +47,5 @@ THe ROC Curve and the precision-recall curve for the CatBoost classifier with ju
 <img title="PR and ROC curves" alt="Alt text" src="/images/CatBoost5.png">
 
 The deployed model is hosted on Streamlit at [Provider-fraud-detection](https://medical-fraud-detection-analysis-pradlanka.streamlit.app) where the user can enter the provider's features  and get a prediction on the whether a provider is potentially fraudulent or not. A screenshot of the App is displayed below 
-<img title="App GUI" alt="Alt text" src="/images/AppGUI.png">
+
+[<img title="App GUI" alt="Alt text" src="/images/AppGUI.png">](https://www.kaggle.com/datasets/rohitrox/healthcare-provider-fraud-detection-analysis/data)
