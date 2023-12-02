@@ -1,4 +1,4 @@
-# Fraud Detection in Medical Healthcare Claims (in Provider Level)
+# Fraud Detection in Healthcare Claims (at Provider Level)
 ## 1. Buisiness problem
 Health care fraud  is a huge problem in the United States. As the FBI website notes, health care fraud is not a victimless crime and it causes tens of billions of dollars in losses each year. It can raise health insurance premiums, expose you to unnecessary medical procedures, and increased taxes. In this project, I will predict the potentially fraudulent providers based on providers claims. The dataset for this analysis is from [Kaggle](https://www.kaggle.com/datasets/rohitrox/healthcare-provider-fraud-detection-analysis/data). It contians infromation about claims and beneficiary information for several patients and providers.
 
