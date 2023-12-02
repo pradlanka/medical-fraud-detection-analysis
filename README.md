@@ -23,8 +23,8 @@ Furthermore we use either grid search or randomized search along with cross-vali
 
 ## 5. Evaluation
 We evaluated the best models with optimal set of hyperparameters  for each classifier tested on the hold-out test data. The ROC curves which plot the false-positive rates and the true-positive rates for serveral thresholds as well as the precision-recall curves are shown for all the classifiers. Furthermore, the classifiers are evaluated in several metrics including, accuracy, recall, precision, F1-score, AUC for the ROC curve.
-<img title="ROC Curves" alt="Alt text" src="/images/ROCCurve.png">
-<img title="Precision-Recall Curves" alt="Alt text" src="/images/PRCurve.png">
+<img title="ROC Curves" alt="Alt text" src="/images/ROCCurve.png" width="100%">
+<img title="Precision-Recall Curves" alt="Alt text" src="/images/PRCurve.png" width="100%">
 
 |           Classifier | F1 Score |Precision |  Recall  | Accuracy |   AUC    |
 |  ------------------- | -------- | -------- | -------- | -------- | -------  |
